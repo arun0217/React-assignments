@@ -1,30 +1,23 @@
 import React from 'react';
-import FruitList from './components/FruitList/FruitList';
-import UserList from './components/UserList/UserList';
-import Counter from './components/Counter/Counter';
-import ApiUserFetcher from './components/ApiUserFetcher/ApiUserFetcher';
-import TodoApp from './components/TodoApp/TodoApp';
-import RefDemo from './components/RefDemo/RefDemo';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import styles from './App.module.css';
 
 function App() {
   return (
     <div className={styles.app}>
-      
+      <Navigation />
       <main className={styles.main}>
-        <div className={styles.grid}>
-          <div className={styles.column}>
-            <FruitList />
-            <UserList />
-            <Counter />
-          </div>
-          
-          <div className={styles.column}>
-            <ApiUserFetcher />
-            <TodoApp />
-            <RefDemo />
-          </div>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
     </div>
   );

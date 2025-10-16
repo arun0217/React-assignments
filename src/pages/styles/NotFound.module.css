@@ -1,0 +1,63 @@
+.notFound {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.container {
+  text-align: center;
+}
+
+.content {
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+.errorTitle {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.errorMessage {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.homeButton {
+  display: inline-block;
+  background: white;
+  color: #667eea;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.homeButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .errorCode {
+    font-size: 6rem;
+  }
+  
+  .errorTitle {
+    font-size: 1.5rem;
+  }
+}
